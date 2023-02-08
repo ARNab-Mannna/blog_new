@@ -1,0 +1,160 @@
+
+{% extends "base.html" %}
+{% block title %}
+this is index page
+{% endblock %}
+
+
+{% block body %}
+
+
+
+
+{% comment %} <div class="nav-scroller py-1 mb-2">
+  <nav class="nav d-flex justify-content-between">
+    <a class="p-2 text-muted" href="#">World</a>
+    <a class="p-2 text-muted" href="#">U.S.</a>
+    <a class="p-2 text-muted" href="#">Technology</a>
+    <a class="p-2 text-muted" href="#">Design</a>
+    <a class="p-2 text-muted" href="#">Culture</a>
+    <a class="p-2 text-muted" href="#">Business</a>
+    <a class="p-2 text-muted" href="#">Politics</a>
+    <a class="p-2 text-muted" href="#">Opinion</a>
+    <a class="p-2 text-muted" href="#">Science</a>
+    <a class="p-2 text-muted" href="#">Health</a>
+    <a class="p-2 text-muted" href="#">Style</a>
+    <a class="p-2 text-muted" href="#">Travel</a>
+  </nav>
+</div> {% endcomment %}
+ 
+
+
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+       <img src="https://wallpaperaccess.com/full/2661555.png" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+       <img src="https://images.wallpapersden.com/image/download/akaza-demon-slayer_a2luaGeUmZqaraWkpJRobWllrWdma2U.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+       <img src="https://images.wallpapersden.com/image/download/muzan-kibutsuji-in-demon-slayer_a2xlaGmUmZqaraWkpJRnamtlrWZpaWU.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+ <div class="container my-3 px-5">
+
+ <h1 class="my-3 text-center">WELCOME TO OUR BLOG MUSIYAM</h1>
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+        {% for blog in blogs  %}
+        <div class="col">
+          <div class="card shadow-sm">
+            {% comment %} <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="https://source.unsplash.com/900x900/?nature" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> {% endcomment %}
+            <img src="/media/{{blog.image}}" class="d-block w-100" alt="...">
+            {% comment %} <iframe width="560" height="315" src="https://www.youtube.com/embed/AhP5Tg_BLIk" title="Amazon" frameborder="2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> {% endcomment %}
+            <div class="card-body">
+              <h2>{{blog.title}}</h2>
+              <p class="card-text" > {{blog.content | safe }} </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  {% comment %} <button type="button" class="btn btn-sm btn-outline-secondary">View</button> {% endcomment %}
+                  <a class="btn btn-sm btn-outline-secondary" href="{% url 'blog_detail' blog.slug %} " >View</a>
+                </div>
+                <small class="text-muted">{{blog.created_at}}</small>
+                <small class="text-muted">{{blog.user.username}}</small>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+
+
+
+
+
+<div class="container">
+  <nav aria-label="blog post pages">
+    <ul class="pagination">
+      {% if blogs.has_previous %}
+      <a class="page-link" href="?page={{blogs.previous_page_number}}">previous</a>
+      {% comment %} <li class="page-item disabled "><a class="page-link" href="?page={{blogs.previous_page_number}}">Previous</a></li> {% endcomment %}
+      {% endif %}
+      <div >
+        <li class="page-item active"><h4>{{blogs.number}}</h4></li>
+    </div>
+      {% comment %} {% if blogs.has_next %}
+      <li class="page-item active"></li>
+      {% endif %}
+      {% if blogs.has_next %}
+      <li class="page-item"><a class="page-link" href="?page={{blogs.next_page_number}}">{{blogs.page_num}}</a></li>
+      {% endif %}
+      {% if blogs.has_next%}
+      <li class="page-item"><a class="page-link" href="?page={{blogs.next_page_number}}">{{blogs.page_num}}</a></li>
+      {% endif %} {% endcomment %}
+      {% if blogs.has_next%}
+      <li class="page-item"><a class="page-link" href="?page={{blogs.next_page_number}}">Next</a></li>
+      {% endif%} 
+    </ul>
+  </nav>
+
+
+
+  {% comment %} <nav aria-label="blog post pages"> {% endcomment %}
+    {% comment %} {% for i in page %}  {% endcomment %}
+    {% comment %} {% if i.has_previous %}
+    <ul class="pagination">
+      <li class="page-item disabled">
+        <a class="page-link" href="{{i.previous_page_number }}" tabindex="-1">Previous</a>
+      </li>
+      {% endif %}
+      <li class="page-item"><a class="page-link" href="/index/?=1">1</a></li>
+      <li class="page-item active">
+        <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="page-item"><a class="page-link" href="{{i.next_page_number }}">3</a></li>
+      <li class="page-item">
+        <a class="page-link" href="#">Next</a>
+      </li>
+    </ul>
+  </nav>
+</div> {% endcomment %}
+{% comment %} {% endfor %}  {% endcomment %}
+ 
+</main>
+
+<footer class="text-muted py-5">
+  <div class="container">
+    <p class="float-end mb-1">
+      <a href="#">Back to top</a>
+    </p>
+    <p class="mb-1">Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
+    <p class="mb-0">New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a href="/docs/5.1/getting-started/introduction/">getting started guide</a>.</p>
+  </div>
+</footer>
+
+
+    <script src="/docs/5.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+      
+  </body>
+</html>
+
+{% endblock %}

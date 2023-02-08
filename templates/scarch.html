@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}
+this is Search Results
+{% endblock %}
+
+{% block body %}
+
+
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+    {% for blog in all_blog %}
+    <div class="col">
+      <div class="card shadow-sm">
+        {% comment %} <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="https://source.unsplash.com/900x900/?nature" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> {% endcomment %}
+        <img src="/media/{{blog.image}}" class="d-block w-100" alt="...">
+        {% comment %} <iframe width="560" height="315" src="https://www.youtube.com/embed/AhP5Tg_BLIk" title="Amazon" frameborder="2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> {% endcomment %}
+        <div class="card-body">
+          <h2>{{blog.title}}</h2>
+          <p class="card-text" > {{blog.content | safe}} </p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+              {% comment %} <button type="button" class="btn btn-sm btn-outline-secondary">View</button> {% endcomment %}
+              <a class="btn btn-sm btn-outline-secondary" href="{% url 'blog_detail' blog.slug %} " >View</a>
+            </div>
+            <small class="text-muted">{{blog.created_at}}</small>
+            <small class="text-muted">{{blog.user.username}}</small>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  
+
+{% endblock %}

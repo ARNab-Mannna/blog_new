@@ -1,0 +1,391 @@
+
+{% extends "base.html" %}
+{% block title %}
+this is index page
+{% endblock %}
+
+
+{% block body %}
+<body>
+{% comment %} <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark"> {% endcomment %}
+    
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+  <strong>Welcome Anime lovers!</strong> You should check in on some of those fields below.
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+{% comment %} <div class="container-fluid xy-6"> {% endcomment %}
+<div class ="container-fluid my-3 px-3"> 
+
+      {% comment %} <a class="navbar-brand" href="#">cake and pestrees here</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button> {% endcomment %}
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled">Disabled</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      {% comment %} <img src="/static/wwm.jpg" class="d-block w-100" alt="..." width="1500" height="666"> {% endcomment %}
+       <img src="https://wallpaperaccess.com/full/2661555.png" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      {% comment %} <img src="/static/halsey.jpg" class="d-block w-100" alt="..." width="1500" height="666"> {% endcomment %}
+       <img src="https://images.wallpapersden.com/image/download/akaza-demon-slayer_a2luaGeUmZqaraWkpJRobWllrWdma2U.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      {% comment %} <img src="/static/bill.jpg" class="d-block w-100" alt="..." width="1500" height="666"> {% endcomment %}
+       <img src="https://images.wallpapersden.com/image/download/muzan-kibutsuji-in-demon-slayer_a2xlaGmUmZqaraWkpJRnamtlrWZpaWU.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+{% comment %} 
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/> 
+        <image href="/static/wwm.jpg" height="500" width="1500"/>
+        </svg>
+       
+
+
+        <div class="container -fluid">
+          <div class="carousel-caption text-start">
+            <h1>We bake with love for you</h1>
+            <p>We have lots of collection of Happyness</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Order now </a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+
+        <div class="container-fluid">
+          <div class="carousel-caption">
+            <h1>Another example headline.</h1>
+            <p>Some representative placeholder content for the second slide of the carousel.</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        
+        <svg class="bd-placeholder-img" width="2500" height="700" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="#777"/>     
+  <image href="/static/ani-oo.jpg" height="700" width="2500"/>
+</svg>
+
+
+
+        <div class="container">
+          <div class="carousel-caption text-end">
+            <h1>One more for good measure.</h1>
+            <p>Some representative placeholder content for the third slide of this carousel.</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div> {% endcomment %}
+
+
+  <!-- Marketing messaging and featurettes
+  ================================================== -->
+  <!-- Wrap the rest of the page in another container to center all the content. -->
+
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="display-3">{{blog.title}}</h1>
+      <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+      <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Example row of columns -->
+    {% comment %} <div class="row">
+      <div class="col-md-4">
+        <h2>Heading</h2>
+        <p>Do. </p>
+        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+      </div>
+      <div class="col-md-4">
+        <h2>Heading</h2>
+        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+      </div>
+      <div class="col-md-4">
+        <h2>Heading</h2>
+        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+      </div>
+    </div>
+  </div> {% endcomment %}
+
+
+  {% for blog in blogs %}  
+  <div class="row">
+    <div class="col-md-4">
+      <h2>{{blog.title}}</h2>
+      <a href="#">
+        {% comment %} <img class="img-fluid card-img-top" src="/media/{{blog.image}}" alt="..."/>  {% endcomment %}
+        <img src="/media/{{blog.image}}"
+        class="thumb alignnone size-thumbnail wp-image-1243" 
+        alt="..." width="500" height="500" scale="2">
+        <hr>  </hr>    
+          {{blog.content|safe}}
+        </a>
+    </div>
+    <div class="btn-group">
+      <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+    </div>
+    <small class="text-muted">{{blog.created_at}}</small>
+    
+  </div>
+  </div> 
+  {% endfor %}
+</div>
+</div>
+</div>
+
+
+
+
+     <!--***************************************************************************************************************************************
+    **************************************************************************************************************************************
+  **************************************************************************************************************************************-->
+<!--
+    <div class="row mb-2"> 
+      <div class="col-md-6">
+        <div class="card flex-md-row mb-4 box-shadow h-md-250">
+          <div class="card-body d-flex flex-column align-items-start">
+            <strong class="d-inline-block mb-2 text-primary">World</strong>
+            <h3 class="mb-0">
+              <a class="text-dark" href="#">Featured post</a>
+            </h3>
+            <div class="mb-1 text-muted">Nov 12</div>
+            <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+            <a href="#">Continue reading</a>
+          </div>
+          <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg">
+            <img class="card-img-right flex-auto d-none d-md-block" data-src="holder.js/200x250?theme=thumb" src="https://res.cloudinary.com/teepublic/image/private/s--t_ONFn56--/t_Preview/b_rgb:191919,c_limit,f_auto,h_630,q_90,w_630/v1619768872/production/designs/21493818_0.jpg"  alt="Card image cap">
+          </svg> 
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card flex-md-row mb-4 box-shadow h-md-250">
+          <div class="card-body d-flex flex-column align-items-start">
+            <strong class="d-inline-block mb-2 text-success">Design</strong>
+            <h3 class="mb-0">
+              <a class="text-dark" href="#">Post title</a>
+            </h3>
+            <div class="mb-1 text-muted">Nov 11</div>
+            <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+            <a href="#">Continue reading</a>
+          </div>
+          <img class="card-img-right flex-auto d-none d-md-block" data-src="holder.js/200x250?theme=thumb" alt="Card image cap">
+        </div>
+      </div>
+    </div> 
+
+  -->
+ <!-- **************************************************************************************************************************************
+  **************************************************************************************************************************************
+  ***************************************************************************************************************************************-->
+    <!-- START THE FEATURETTES
+    {% for blog in blogs %}
+  <hr class="featurette-divider">
+
+  <div class="row featurette">
+    <div class="col-md-7">
+      <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
+      <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
+    </div>
+    <div class="col-md-5">
+            {% comment %} <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> {% endcomment %}
+      <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg">
+                 {% comment %} <image href="/static/bill.jpg" height="500" width="500"/> {% endcomment %}
+            <image href="/media/{blog.image}" height="500" width="500"/>
+      </svg>
+    </div>
+   </div>
+
+   
+  {% endfor %}  -->
+  
+
+
+
+    
+
+
+
+
+
+
+
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
+        <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        {% comment %} <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Hello</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> {% endcomment %}
+      
+      {% comment %} <svg width="200" height="200" {% endcomment %}
+      {% comment %} xmlns="http://www.w3.org/2000/svg"> {% endcomment %}
+       {% comment %} <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg"> {% endcomment %}
+        {% comment %} <iframe width="400" height="700" src="https://www.youtube.com/embed/T4NOt727wqI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> {% endcomment %}
+  
+  {% comment %} <image href="/static/herley quinn.jpg" height="500" width="500"/> {% endcomment %}
+  
+{% comment %} </svg> {% endcomment %}
+
+      </div>
+    </div>
+
+
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
+        <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
+      </div>
+      <div class="col-md-5 order-md-1">
+
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg">
+        <image href="https://inumarudashi.com/wp-content/uploads/2021/07/%E7%8B%90%E3%81%AE%E3%81%8A%E9%9D%A2.jpg" height="500" width="500"/>
+      </svg>
+
+       </div>
+    </div>
+
+
+    {% comment %} <div class="row featurette">
+      <div class="col-md-7">
+        
+        <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
+        <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
+      </div>
+      <div class="col-md-5">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+         <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg">
+  
+  <image href="/static/wwm.jpg" height="500" width="500"/>
+</svg>
+      </div>
+    </div> {% endcomment %}
+
+    <hr class="featurette-divider">
+
+
+     <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
+        <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
+      </div>
+      
+      <div class="col-md-5">
+        {% comment %} <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> {% endcomment %}
+         {% comment %} <img src="https://source.unsplash.com/500x500/?dog" class="d-block w-100" alt="..."> {% endcomment %}
+         {% comment %} <iframe width="400" height="700" src="https://www.youtube.com/embed/kE5QWhrNjqY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> {% endcomment %}
+      </div>
+    </div>
+
+
+    <hr class="featurette-divider">
+
+
+
+    <!-- /END THE FEATURETTES -->
+
+  </div><!-- /.container -->
+
+
+  <!-- FOOTER -->
+  <footer class="container">
+    <p class="float-end"><a href="#">Back to top</a></p>
+    <p>&copy; 2017–2021 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+  </footer>
+</main>
+
+
+<!--  <script src="/docs/5.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+-->  
+      
+  </body>
+</html>
+
+
+    <!-- /END THE FEATURETTES -->
+
+  {% comment %} </div><!-- /.container --> {% endcomment %}
+
+
+  <!-- FOOTER -->
+  {% comment %} <footer class="container">
+    <p class="float-end"><a href="#">Back to top</a></p>
+    <p>&copy; 2017–2021 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+  </footer>
+</main>
+
+
+    <script src="/docs/5.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
+
+       {% endcomment %}
+  {% comment %} </body>
+</html> {% endcomment %}
+
+
+{% endblock %}

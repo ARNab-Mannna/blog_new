@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block title %}
+this is detail page
+{% endblock %}
+
+
+{% block body %}
+    <header class="masthead" >
+      <div class="overlay"></div>
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="post-heading">
+                            <h1>{{slug_obj.title}}</h1>
+                            <h2 class="subheading"></h2>
+                            <span class="meta">
+                                Posted by
+                                <a href="#!">{{slug_obj.user.username}}</a>
+                                on   {{slug_obj.created_at}}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Post Content-->
+        <article class="mb-4">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        {{slug_obj.content | safe}}
+                           
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </article>
+        {% endblock %}
