@@ -101,6 +101,5 @@ def blog_post(request):
 
 
    
-#git checkout -b port_branch
-#git remote set-url https://ARNab-Mannna@github.com/ARNab-Mannna/portfoio.git
-# https://github.com/ARNab-Mannna/Blog_Project.git
+#git checkout -b bl_branch
+#git remote set-url origin https://ARNab-Mannna@github.com/ARNab-Mannna/blog_new.git
